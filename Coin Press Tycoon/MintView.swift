@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The Mint tab — the big tap press, balance, coins/sec, tap power. Tapping the press mints coins.
 struct MintView: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     @State private var pressDown = false
     @State private var floaters: [MintFloater] = []
 

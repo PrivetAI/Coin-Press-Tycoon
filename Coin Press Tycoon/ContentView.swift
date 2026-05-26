@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -18,10 +18,15 @@ struct ContentView: View {
         }
         .onChange(of: scenePhase) { phase in
             switch phase {
-            case .background, .inactive:
+            case .background:
                 store.handleBackground()
             case .active:
                 store.handleForeground()
+            case .inactive:
+                break   // transitional state — do not stamp lastActive here; it
+                        // fires both when entering AND leaving the background, so
+                        // reacting to it would erase the background-entry timestamp
+                        // and cause creditOfflineEarnings() to see elapsed ≈ 0.
             @unknown default:
                 break
             }

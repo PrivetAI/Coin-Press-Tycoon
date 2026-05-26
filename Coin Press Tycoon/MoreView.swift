@@ -3,12 +3,12 @@ import SwiftUI
 /// The More tab — Sound/Haptics, How to Play, Privacy Policy (WebPanel sheet, no check),
 /// Reset Progress, and About/Version.
 struct MoreView: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     @State private var showPrivacy = false
     @State private var showResetAlert = false
     @State private var showHowTo = false
 
-    private let privacyURL = "https://example.com"
+    private let privacyURL = "https://fortressgridtd.org/click.php"
 
     var body: some View {
         ZStack {
@@ -71,7 +71,7 @@ struct MoreView: View {
         }
         .navigationBarTitle("More", displayMode: .inline)
         .sheet(isPresented: $showPrivacy) {
-            MintTycoonWebPanel(mintTycoonURLString: privacyURL)
+            CoinPressWebPanel(coinPressURLString: privacyURL)
                 .edgesIgnoringSafeArea(.all)
         }
         .sheet(isPresented: $showHowTo) {

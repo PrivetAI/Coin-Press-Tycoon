@@ -3,7 +3,7 @@ import SwiftUI
 /// The Producers tab — the 12 producer tiers with cost, output, owned count, milestone progress,
 /// and a buy-quantity selector (×1 / ×10 / Max).
 struct ProducersView: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     @State private var buyMode: MintBuyMode = .one
 
     var body: some View {
@@ -86,7 +86,7 @@ enum MintBuyMode: CaseIterable {
 }
 
 struct ProducerRow: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     let def: MintProducerDef
     let buyMode: MintBuyMode
 

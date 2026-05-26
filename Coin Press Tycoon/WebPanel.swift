@@ -1,9 +1,9 @@
 import SwiftUI
 import WebKit
 
-// Fullscreen / sheet WebView wrapper. Renamed per-app: mintTycoon* prefix.
-struct MintTycoonWebPanel: UIViewRepresentable {
-    let mintTycoonURLString: String
+// Fullscreen / sheet WebView wrapper. Renamed per-app: coinPress* prefix.
+struct CoinPressWebPanel: UIViewRepresentable {
+    let coinPressURLString: String
 
     func makeUIView(context: Context) -> WKWebView {
         let config = WKWebViewConfiguration()
@@ -12,7 +12,7 @@ struct MintTycoonWebPanel: UIViewRepresentable {
         webView.scrollView.contentInsetAdjustmentBehavior = .always
         webView.isOpaque = true
         webView.backgroundColor = UIColor(MintPalette.background)
-        if let url = URL(string: mintTycoonURLString) {
+        if let url = URL(string: coinPressURLString) {
             webView.load(URLRequest(url: url))
         }
         return webView

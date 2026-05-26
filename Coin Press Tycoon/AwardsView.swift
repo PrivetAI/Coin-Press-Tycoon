@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The Awards tab — lifetime stats strip, milestones panel, and the achievements grid.
 struct AwardsView: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
 
     private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
 
@@ -140,7 +140,7 @@ struct AwardsView: View {
 }
 
 struct AchievementCell: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     let ach: MintAchievementDef
 
     private var unlocked: Bool { store.isUnlocked(ach.id) }

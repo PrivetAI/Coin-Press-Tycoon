@@ -1,7 +1,7 @@
 import SwiftUI
 
 // Splash shown while the launch check runs.
-struct MintTycoonLoadingScreen: View {
+struct CoinPressLoadingScreen: View {
     @State private var spin = false
     @State private var pulse = false
 
@@ -22,7 +22,7 @@ struct MintTycoonLoadingScreen: View {
                         .frame(width: 64, height: 64)
                         .scaleEffect(pulse ? 1.06 : 0.94)
                 }
-                Text("TAP MINT TYCOON")
+                Text("COIN PRESS TYCOON")
                     .font(.system(size: 18, weight: .heavy, design: .rounded))
                     .tracking(2)
                     .foregroundColor(MintPalette.textPrimary)

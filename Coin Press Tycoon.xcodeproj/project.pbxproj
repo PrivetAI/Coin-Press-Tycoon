@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1000003000000000000001 /* Tap_Mint_TycoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000001 /* Tap_Mint_TycoonApp.swift */; };
+		A1000003000000000000001 /* Coin_Press_TycoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000001 /* Coin_Press_TycoonApp.swift */; };
 		A1000003000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000002 /* ContentView.swift */; };
 		A1000003000000000000003 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000003 /* RootTabView.swift */; };
 		A1000003000000000000004 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000003000000000000004 /* Theme.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B1000003000000000000001 /* Tap_Mint_TycoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tap_Mint_TycoonApp.swift; sourceTree = "<group>"; };
+		B1000003000000000000001 /* Coin_Press_TycoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin_Press_TycoonApp.swift; sourceTree = "<group>"; };
 		B1000003000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B1000003000000000000003 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		B1000003000000000000004 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		B1000003000000000000016 /* HowToPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayView.swift; sourceTree = "<group>"; };
 		B1000003000000000000017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1000003000000000000018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1000003000000000000001 /* Tap Mint Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tap Mint Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1000003000000000000001 /* Coin Press Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coin Press Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +62,15 @@
 		E1000003000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				E1000003000000000000002 /* Tap Mint Tycoon */,
+				E1000003000000000000002 /* Coin Press Tycoon */,
 				E1000003000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E1000003000000000000002 /* Tap Mint Tycoon */ = {
+		E1000003000000000000002 /* Coin Press Tycoon */ = {
 			isa = PBXGroup;
 			children = (
-				B1000003000000000000001 /* Tap_Mint_TycoonApp.swift */,
+				B1000003000000000000001 /* Coin_Press_TycoonApp.swift */,
 				B1000003000000000000002 /* ContentView.swift */,
 				B1000003000000000000003 /* RootTabView.swift */,
 				B1000003000000000000004 /* Theme.swift */,
@@ -89,13 +89,13 @@
 				B1000003000000000000017 /* Assets.xcassets */,
 				B1000003000000000000018 /* Info.plist */,
 			);
-			path = "Tap Mint Tycoon";
+			path = "Coin Press Tycoon";
 			sourceTree = "<group>";
 		};
 		E1000003000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1000003000000000000001 /* Tap Mint Tycoon.app */,
+				C1000003000000000000001 /* Coin Press Tycoon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F1000003000000000000001 /* Tap Mint Tycoon */ = {
+		F1000003000000000000001 /* Coin Press Tycoon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11000003000000000000001 /* Build configuration list for PBXNativeTarget "Tap Mint Tycoon" */;
+			buildConfigurationList = 11000003000000000000001 /* Build configuration list for PBXNativeTarget "Coin Press Tycoon" */;
 			buildPhases = (
 				G1000003000000000000001 /* Sources */,
 				D1000003000000000000001 /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = "Tap Mint Tycoon";
-			productName = "Tap Mint Tycoon";
-			productReference = C1000003000000000000001 /* Tap Mint Tycoon.app */;
+			name = "Coin Press Tycoon";
+			productName = "Coin Press Tycoon";
+			productReference = C1000003000000000000001 /* Coin Press Tycoon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = J1000003000000000000001 /* Build configuration list for PBXProject "Tap Mint Tycoon" */;
+			buildConfigurationList = J1000003000000000000001 /* Build configuration list for PBXProject "Coin Press Tycoon" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1000003000000000000001 /* Tap Mint Tycoon */,
+				F1000003000000000000001 /* Coin Press Tycoon */,
 			);
 		};
 /* End PBXProject section */
@@ -169,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000003000000000000001 /* Tap_Mint_TycoonApp.swift in Sources */,
+				A1000003000000000000001 /* Coin_Press_TycoonApp.swift in Sources */,
 				A1000003000000000000002 /* ContentView.swift in Sources */,
 				A1000003000000000000003 /* RootTabView.swift in Sources */,
 				A1000003000000000000004 /* Theme.swift in Sources */,
@@ -316,7 +316,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Tap Mint Tycoon/Info.plist";
+				INFOPLIST_FILE = "Coin Press Tycoon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapminttycoon.tapminttycoon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coinpresstycoon.coinpresstycoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -348,7 +348,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Tap Mint Tycoon/Info.plist";
+				INFOPLIST_FILE = "Coin Press Tycoon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapminttycoon.tapminttycoon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coinpresstycoon.coinpresstycoon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -372,7 +372,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		J1000003000000000000001 /* Build configuration list for PBXProject "Tap Mint Tycoon" */ = {
+		J1000003000000000000001 /* Build configuration list for PBXProject "Coin Press Tycoon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				K1000003000000000000001 /* Debug */,
@@ -381,7 +381,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11000003000000000000001 /* Build configuration list for PBXNativeTarget "Tap Mint Tycoon" */ = {
+		11000003000000000000001 /* Build configuration list for PBXNativeTarget "Coin Press Tycoon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				L1000003000000000000001 /* Debug */,

@@ -3,7 +3,7 @@ import SwiftUI
 /// App shell: a custom HStack tab bar (NOT a TabView) over a `switch` on the selected tab.
 /// Each tab hosts its own NavigationView so navigation state is isolated per tab.
 struct RootTabView: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     @State private var selectedTab = 0
     @State private var toastTitle: String?
 

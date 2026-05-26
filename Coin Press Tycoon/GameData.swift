@@ -125,7 +125,7 @@ struct MintAchievementDef: Identifiable {
     let title: String
     let detail: String
     let goal: Double
-    let progress: (MintTycoonStore) -> Double
+    let progress: (CoinPressStore) -> Double
 }
 
 enum MintAchievements {

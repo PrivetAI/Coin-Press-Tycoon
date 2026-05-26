@@ -82,7 +82,7 @@ struct MintSave: Codable {
 
 // MARK: - Store
 
-final class MintTycoonStore: ObservableObject {
+final class CoinPressStore: ObservableObject {
     static let offlineCapSeconds: Double = 8 * 60 * 60   // 8h cap
     static let bullionPercentEach: Double = 0.02         // each Bullion = +2% global output
 
@@ -157,12 +157,12 @@ final class MintTycoonStore: ObservableObject {
         for id in save.purchasedUpgrades {
             if case .globalMult(let f)? = MintUpgradeCatalog.def(id)?.kind { m *= f }
         }
-        m *= (1.0 + save.bullion * MintTycoonStore.bullionPercentEach)
+        m *= (1.0 + save.bullion * CoinPressStore.bullionPercentEach)
         return MintMath.sane(m)
     }
 
     /// Bullion-only bonus fraction (for UI display).
-    var bullionBonusFraction: Double { save.bullion * MintTycoonStore.bullionPercentEach }
+    var bullionBonusFraction: Double { save.bullion * CoinPressStore.bullionPercentEach }
 
     /// Per-producer extra multiplier from upgrades.
     private func producerUpgradeMult(_ tier: Int) -> Double {
@@ -403,7 +403,7 @@ final class MintTycoonStore: ObservableObject {
             save.lastActive = now
             return
         }
-        let capped = min(elapsed, MintTycoonStore.offlineCapSeconds)
+        let capped = min(elapsed, CoinPressStore.offlineCapSeconds)
         // Use the current production rate as the offline rate (a fair, simple model).
         let rate = coinsPerSecond * offlineRateMult
         let gain = MintMath.sane(rate * capped)
@@ -411,7 +411,7 @@ final class MintTycoonStore: ObservableObject {
             save.coins = MintMath.sane(save.coins + gain)
             save.lifetimeCoins = MintMath.sane(save.lifetimeCoins + gain)
             save.idleClaims += 1
-            offlineSummary = MintOfflineSummary(seconds: capped, coins: gain, capped: elapsed > MintTycoonStore.offlineCapSeconds)
+            offlineSummary = MintOfflineSummary(seconds: capped, coins: gain, capped: elapsed > CoinPressStore.offlineCapSeconds)
         }
         save.lastActive = now
         persist()
@@ -427,6 +427,7 @@ final class MintTycoonStore: ObservableObject {
     }
 
     func handleForeground() {
+        creditOfflineEarnings()   // credit time spent in background before resuming the timer
         lastTick = Date()
     }
 

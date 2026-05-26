@@ -3,7 +3,7 @@ import SwiftUI
 /// The Reforge tab — prestige preview/confirm plus the one-time upgrades shop (tap, global,
 /// per-producer, special).
 struct ReforgeView: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     @State private var showConfirm = false
     @State private var category: MintShopFilter = .all
 
@@ -171,7 +171,7 @@ enum MintShopFilter: CaseIterable {
 }
 
 struct UpgradeRow: View {
-    @EnvironmentObject var store: MintTycoonStore
+    @EnvironmentObject var store: CoinPressStore
     let def: MintUpgradeDef
 
     private var purchased: Bool { store.isPurchased(def.id) }
