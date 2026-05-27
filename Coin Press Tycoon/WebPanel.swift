@@ -11,7 +11,7 @@ struct CoinPressWebPanel: UIViewRepresentable {
         webView.allowsBackForwardNavigationGestures = true
         webView.scrollView.contentInsetAdjustmentBehavior = .always
         webView.isOpaque = true
-        webView.backgroundColor = UIColor(MintPalette.background)
+        webView.backgroundColor = .black
         if let url = URL(string: coinPressURLString) {
             webView.load(URLRequest(url: url))
         }

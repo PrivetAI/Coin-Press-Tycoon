@@ -14,7 +14,8 @@ struct CoinPressTycoonApp: App {
                 if let ready = coinPressLinkReady {
                     if ready {
                         CoinPressWebPanel(coinPressURLString: coinPressSourceLink)
-                            .edgesIgnoringSafeArea(.all)
+                            .edgesIgnoringSafeArea(.bottom)
+                            .background(Color.black.ignoresSafeArea())
                     } else {
                         ContentView()
                             .environmentObject(store)
